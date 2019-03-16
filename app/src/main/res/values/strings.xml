@@ -1,8 +1,41 @@
 <resources>
+    <!-- Strings used in the login activity -->
     <string name="app_name">HKR_Health</string>
     <string name="enter_password">Enter password..</string>
     <string name="enter_username">Enter username..</string>
     <string name="create_user">Create user</string>
     <string name="facebook_login">Login with Facebook</string>
     <string name="normal_login">Login</string>
+
+    <!-- Strings used for navigation menu -->
+    <string name="nav_workout">Workout</string>
+    <string name="nav_measuremnt">Measurement</string>
+    <string name="nav_logout">Logout</string>
+
+    <!-- Strings used for facebook login -->
+    <string name="facebook_app_id">566508910509655</string>
+    <string name="fb_login_protocol_scheme">fb566508910509655</string>
+
+
+
+    <string-array name="muscle_groups">
+        <item>Chest</item>
+        <item>Back</item>
+        <item>Bicep</item>
+        <item>Tricep</item>
+        <item>Shoulders</item>
+        <item>Core</item>
+        <item>Legs</item>
+    </string-array>
+
+    <string-array name="chest_exercises">
+        <item>Benchpress</item>
+        <item>Dumbellpress</item>
+        <item>Flyes</item>
+        <item>Pushup</item>
+    </string-array>
+
+    <string-array name="back_exercises">
+
+    </string-array>
 </resources>
