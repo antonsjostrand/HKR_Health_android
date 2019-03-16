@@ -11,7 +11,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.example.hkr_health.Fragments.WorkoutFragment;
+import com.example.hkr_health.Fragments.MeasurementCreationFragment;
+import com.example.hkr_health.Fragments.WorkoutCreationFragment;
 import com.facebook.login.LoginManager;
 
 public class MainMenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -48,7 +49,6 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
             navigationMenu.setNavigationItemSelectedListener(this);
 
             fm = MainMenuActivity.this.getSupportFragmentManager();
-            ft = fm.beginTransaction();
 
         }catch (Exception e){
             Log.d(TAG, "setNavigationMenuListener: ERROR");
@@ -59,22 +59,36 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         try {
+            ft = fm.beginTransaction();
             //Switch that puts the correct fragment into the framelayout when
             //the corresponding navigation item is clicked.
             switch (item.getItemId()) {
-                case R.id.nav_workout:
-                    Log.d(TAG, "onNavigationItemSelected: workout pressed");
+                case R.id.nav_workout_creation:
+                    Log.d(TAG, "onNavigationItemSelected: WORKOUT CREATION PRESSED");
 
-                    WorkoutFragment workFrag = new WorkoutFragment();
-                    ft.replace(R.id.fragment_container, workFrag);
+                    //Places the workout fragment and place it into the container.
+                    WorkoutCreationFragment workCrFrag = new WorkoutCreationFragment();
+                    ft.replace(R.id.fragment_container, workCrFrag);
                     ft.commit();
 
                     break;
-                case R.id.nav_measurement:
+                case R.id.nav_workout_history:
+
+                    break;
+                case R.id.nav_measurement_creation:
+                    Log.d(TAG, "onNavigationItemSelected: MEASUREMENT CREATION PRESSED");
+
+                    //Places the measurement creation fragment layout into the container.
+                    MeasurementCreationFragment measurementCrFrag = new MeasurementCreationFragment();
+                    ft.replace(R.id.fragment_container, measurementCrFrag);
+                    ft.commit();
+
+                    break;
+                case R.id.nav_measurement_history:
 
                     break;
                 case R.id.nav_logout:
-                    Log.d(TAG, "onNavigationItemSelected: logout pressed");
+                    Log.d(TAG, "onNavigationItemSelected: LOGOUT PRESSED");
 
                     LoginManager.getInstance().logOut();
                     Intent intent = new Intent(this, LoginActivity.class);

@@ -8,13 +8,23 @@
     <string name="normal_login">Login</string>
 
     <!-- Strings used for navigation menu -->
-    <string name="nav_workout">Workout</string>
-    <string name="nav_measuremnt">Measurement</string>
+    <string name="nav_workout_creation">Workout creation</string>
+    <string name="nav_workout_history">Workout history</string>
+    <string name="nav_measurement_creation">Measurement creation</string>
+    <string name="nav_measurement_history">Measurement history</string>
     <string name="nav_logout">Logout</string>
 
     <!-- Strings used for facebook login -->
     <string name="facebook_app_id">566508910509655</string>
     <string name="fb_login_protocol_scheme">fb566508910509655</string>
+
+    <!-- Strings used in the Workout fragments -->
+    <string name="workout_creation">Create workout</string>
+    <string name="workout_history">View workout history</string>
+
+    <!-- Strings used in the Measurement fragments -->
+    <string name="measurement_creation">Create measurement</string>
+    <string name="measurement_history">View measurement history</string>
 
 
 
