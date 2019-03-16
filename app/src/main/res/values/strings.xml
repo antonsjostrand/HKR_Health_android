@@ -21,6 +21,11 @@
     <!-- Strings used in the Workout fragments -->
     <string name="workout_creation">Create workout</string>
     <string name="workout_history">View workout history</string>
+    <string name="add_exercise">Add exercise</string>
+    <string name="clear">Clear</string>
+    <string name="exercise">EXERCISE:</string>
+    <string name="title">TITLE:</string>
+    <string name="weight">WEIGHT:</string>
 
     <!-- Strings used in the Measurement fragments -->
     <string name="measurement_creation">Create measurement</string>

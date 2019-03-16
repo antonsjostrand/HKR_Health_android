@@ -2,19 +2,22 @@ package com.example.hkr_health.Models;
 
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Workout {
 
     private static final String TAG = "Workout";
 
     private String title;
-    private Exercise[] exerciseList;
-    private String date;
+    private ArrayList<Exercise> exerciseList;
+    private Date date;
 
-    public Workout(String title, String date, Exercise... exerciseList){
+    public Workout(String title, Date date, ArrayList<Exercise> exerciseList){
         try {
             this.title = title;
             this.date = date;
-            this.exerciseList = exerciseList.clone();
+            this.exerciseList = exerciseList;
         }catch (Exception e){
             Log.d(TAG, "Workout: Constructor error");
             Log.d(TAG, "Workout: " + e);
@@ -29,19 +32,19 @@ public class Workout {
         this.title = title;
     }
 
-    public Exercise[] getExerciseList() {
+    public ArrayList<Exercise> getExerciseList() {
         return exerciseList;
     }
 
-    public void setExerciseList(Exercise[] exerciseList) {
+    public void setExerciseList(ArrayList<Exercise> exerciseList) {
         this.exerciseList = exerciseList;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 }

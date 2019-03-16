@@ -54,13 +54,6 @@ public class LoginActivity extends AppCompatActivity {
             callbackManager = CallbackManager.Factory.create();
             facebookLoginButton.setReadPermissions(Arrays.asList(EMAIL));
 
-            isLoggedIn = checkFacebookLoginStatus();
-
-            if (isLoggedIn){
-                Log.d(TAG, "onCreate: USER ALREADY LOGGED IN.");
-                Intent intent = new Intent(LoginActivity.this, MainMenuActivity.class);
-                startActivity(intent);
-            }
 
                 //Callback registration
                 facebookLoginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
@@ -96,6 +89,17 @@ public class LoginActivity extends AppCompatActivity {
             Log.d(TAG, "onCreate: ERROR CAUGHT BY TRY-CATCH");
             Log.d(TAG, "onCreate: ERROR: " + e);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        isLoggedIn = checkFacebookLoginStatus();
+        if (isLoggedIn){
+            Log.d(TAG, "onResume: USER ALREADY LOGGED IN.");
+            Intent intent = new Intent(LoginActivity.this, MainMenuActivity.class);
+            startActivity(intent);
+        }
+        super.onResume();
     }
 
     @Override

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 import com.example.hkr_health.Fragments.MeasurementCreationFragment;
 import com.example.hkr_health.Fragments.WorkoutCreationFragment;
@@ -36,6 +37,8 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
 
             drawerLayout = findViewById(R.id.main_menu_drawerlayout);
             setNavigationMenuListener();
+
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         }catch (Exception e){
             Log.d(TAG, "onCreate: ERROR");
