@@ -3,4 +3,10 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="facebook_blue">#091670</color>
+    <color name="facebook_blue_pressed">#3339FF</color>
+    <color name="hkr_green">#21A816</color>
+    <color name="hkr_green_pressed">#92FC64</color>
 </resources>

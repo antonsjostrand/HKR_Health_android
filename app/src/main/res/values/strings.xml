@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">HKR_Health</string>
+    <string name="enter_password">Enter password..</string>
+    <string name="enter_username">Enter username..</string>
+    <string name="create_user">Create user</string>
+    <string name="facebook_login">Login with Facebook</string>
+    <string name="normal_login">Login</string>
 </resources>
