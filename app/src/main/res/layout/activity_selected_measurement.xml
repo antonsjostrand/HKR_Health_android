@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".SelectedMeasurementActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:id="@+id/measurementTitle"
         android:text="@string/title"
@@ -16,19 +18,31 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
-        android:id="@+id/measurementArms"
-        android:text="@string/arms"
+        android:id="@+id/measurementDate"
+        android:text="@string/date"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/measurementTitle"
         app:layout_constraintLeft_toLeftOf="parent"
         />
 
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:id="@+id/measurementArms"
+        android:text="@string/arms"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/measurementDate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:id="@+id/measurementLegs"
         android:text="@string/legs"
@@ -38,8 +52,8 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:id="@+id/measurementChest"
         android:text="@string/chest"
@@ -49,8 +63,8 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:id="@+id/measurementWaist"
         android:text="@string/waist"
@@ -61,7 +75,7 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:id="@+id/measurementShoulders"
         android:text="@string/shoulders"
@@ -71,8 +85,8 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
         android:id="@+id/measurementCalves"
         android:text="@string/calves"
@@ -81,39 +95,35 @@
         app:layout_constraintLeft_toLeftOf="parent"
         />
 
-
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/createMeasurementButton"
-        android:text="@string/measurement_creation"
-        android:background="@drawable/button_background"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/measurementCalvesET"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        />
-
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:id="@+id/measurementTitleET"
+        android:layout_height="40dp"
+        android:id="@+id/measurementTitleTV"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementTitle"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/measurementTitle"
         app:layout_constraintBottom_toBottomOf="@id/measurementTitle"
         app:layout_constraintRight_toRightOf="parent"
         />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:id="@+id/measurementArmsET"
+        android:layout_height="40dp"
+        android:id="@+id/measurementDateTV"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="@id/measurementDate"
+        app:layout_constraintLeft_toRightOf="@id/measurementDate"
+        app:layout_constraintBottom_toBottomOf="@id/measurementDate"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/measurementArmsTV"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementArms"
@@ -122,10 +132,10 @@
         app:layout_constraintRight_toRightOf="parent"
         />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:id="@+id/measurementLegsET"
+        android:layout_height="40dp"
+        android:id="@+id/measurementLegsTV"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementLegs"
@@ -134,10 +144,10 @@
         app:layout_constraintRight_toRightOf="parent"
         />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:id="@+id/measurementChestET"
+        android:layout_height="40dp"
+        android:id="@+id/measurementChestTV"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementChest"
@@ -146,10 +156,10 @@
         app:layout_constraintRight_toRightOf="parent"
         />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:id="@+id/measurementWaistET"
+        android:layout_height="40dp"
+        android:id="@+id/measurementWaistTV"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementWaist"
@@ -158,10 +168,10 @@
         app:layout_constraintRight_toRightOf="parent"
         />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:id="@+id/measurementShouldersET"
+        android:layout_height="40dp"
+        android:id="@+id/measurementShouldersTV"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementShoulders"
@@ -170,10 +180,10 @@
         app:layout_constraintRight_toRightOf="parent"
         />
 
-    <EditText
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:id="@+id/measurementCalvesET"
+        android:layout_height="40dp"
+        android:id="@+id/measurementCalvesTV"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementCalves"

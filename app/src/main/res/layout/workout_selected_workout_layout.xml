@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:weightSum="100">
 
     <LinearLayout
@@ -19,7 +19,7 @@
             android:textAlignment="center"
             android:text="Exercise"
             android:textSize="20dp"
-            android:id="@+id/exerciseTV"
+            android:id="@+id/selectedExerciseTV"
             android:layout_weight="50"
             />
 
@@ -30,7 +30,7 @@
             android:textAlignment="center"
             android:text="Set"
             android:textSize="20dp"
-            android:id="@+id/setTV"
+            android:id="@+id/selectedSetTV"
             android:layout_weight="50"
             />
 
@@ -44,24 +44,24 @@
         android:orientation="vertical"
         android:layout_weight="50">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:id="@+id/repsTV"
-                android:text="Reps"
-                android:textSize="20dp"
-                />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:id="@+id/selectedRepsTV"
+            android:text="Reps"
+            android:textSize="20dp"
+            />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:id="@+id/weightTV"
-                android:text="Weight"
-                android:textSize="20dp"
-                android:layout_below="@id/setTV"
-                />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:id="@+id/selectedWeightTV"
+            android:text="Weight"
+            android:textSize="20dp"
+            android:layout_below="@id/setTV"
+            />
 
     </LinearLayout>
 

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectedWorkoutActivity">
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:id="@+id/selectedWorkoutTitle"
+        android:text="@string/title"
+        android:textSize="25sp"
+        android:layout_margin="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:id="@+id/selectedWorkoutTitleTV"
+          android:textSize="20sp"
+          android:layout_margin="16dp"
+          app:layout_constraintLeft_toRightOf="@id/selectedWorkoutTitle"
+          app:layout_constraintBottom_toBottomOf="@id/selectedWorkoutTitle"
+          app:layout_constraintTop_toTopOf="@id/selectedWorkoutTitle"
+          app:layout_constraintRight_toRightOf="parent"
+          />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:id="@+id/selectedWorkoutDate"
+        android:text="@string/date"
+        android:textSize="25sp"
+        android:layout_margin="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectedWorkoutTitle"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/selectedWorkoutDateTV"
+        android:textSize="20sp"
+        android:layout_margin="16dp"
+        app:layout_constraintLeft_toRightOf="@id/selectedWorkoutDate"
+        app:layout_constraintBottom_toBottomOf="@id/selectedWorkoutDate"
+        app:layout_constraintTop_toTopOf="@id/selectedWorkoutDate"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/exercisesPerformed"
+        android:textSize="25sp"
+        android:text="@string/exercises_performed"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/selectedWorkoutDate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:id="@+id/exercisesRecyclerView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exercisesPerformed"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>

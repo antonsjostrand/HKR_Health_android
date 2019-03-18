@@ -1,4 +1,4 @@
-package com.example.hkr_health.Models;
+package com.example.hkr_health.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.hkr_health.Models.Exercise;
 import com.example.hkr_health.R;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class ExerciseListAdapter extends ArrayAdapter<Exercise> {
         String name = getItem(position).getName();
         String weight = getItem(position).getWeight();
         int set = getItem(position).getSet();
+        int reps = getItem(position).getReps();
 
         LayoutInflater inflater = LayoutInflater.from(myContext);
         convertView = inflater.inflate(myResource, parent, false);
@@ -39,10 +41,12 @@ public class ExerciseListAdapter extends ArrayAdapter<Exercise> {
         TextView nameTV = (TextView) convertView.findViewById(R.id.exerciseTV);
         TextView setTV = (TextView) convertView.findViewById(R.id.setTV);
         TextView weightTV = (TextView) convertView.findViewById(R.id.weightTV);
+        TextView repsTV = (TextView) convertView.findViewById(R.id.repsTV);
 
         nameTV.setText(name);
         setTV.setText("Set: " + String.valueOf(set));
         weightTV.setText(weight + " kg");
+        repsTV.setText(String.valueOf(reps) + " reps");
 
         return convertView;
     }

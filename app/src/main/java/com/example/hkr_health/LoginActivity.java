@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.hkr_health.Database.HkrHealthRepository;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -37,6 +38,9 @@ public class LoginActivity extends AppCompatActivity {
     private static final String EMAIL = "email";
     private boolean isLoggedIn;
 
+    //Database
+    HkrHealthRepository mHkrHealthRepository;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {
@@ -53,7 +57,6 @@ public class LoginActivity extends AppCompatActivity {
             facebookLoginButton = findViewById(R.id.facebookLoginButton);
             callbackManager = CallbackManager.Factory.create();
             facebookLoginButton.setReadPermissions(Arrays.asList(EMAIL));
-
 
                 //Callback registration
                 facebookLoginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
@@ -100,6 +103,11 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         }
         super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     @Override

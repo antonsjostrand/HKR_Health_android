@@ -1,4 +1,4 @@
-package com.example.hkr_health.Models;
+package com.example.hkr_health.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.hkr_health.Models.Workout;
 import com.example.hkr_health.R;
 
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class WorkoutListAdapter extends ArrayAdapter<Workout> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         String title = getItem(position).getTitle();
-        Date date = getItem(position).getDate();
+        String date = getItem(position).getDate();
 
         LayoutInflater inflater = LayoutInflater.from(myConxtext);
         convertView = inflater.inflate(myResource, parent, false);
@@ -40,7 +41,7 @@ public class WorkoutListAdapter extends ArrayAdapter<Workout> {
         TextView dateTW = convertView.findViewById(R.id.dateOfWorkoutTV);
 
         titleTW.setText(title);
-        dateTW.setText(date.toString());
+        dateTW.setText(date);
 
         return convertView;
     }

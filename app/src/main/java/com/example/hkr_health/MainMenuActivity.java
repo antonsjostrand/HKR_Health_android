@@ -12,8 +12,11 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
+import com.example.hkr_health.Database.HkrHealthRepository;
 import com.example.hkr_health.Fragments.MeasurementCreationFragment;
+import com.example.hkr_health.Fragments.MeasurementHistoryFragment;
 import com.example.hkr_health.Fragments.WorkoutCreationFragment;
+import com.example.hkr_health.Fragments.WorkoutHistoryFragment;
 import com.facebook.login.LoginManager;
 
 public class MainMenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,11 +32,16 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
     private FragmentManager fm;
     private FragmentTransaction ft;
 
+    //Database
+    HkrHealthRepository mHkrHealthRepository;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main_menu);
+
+            mHkrHealthRepository = new HkrHealthRepository(this);
 
             drawerLayout = findViewById(R.id.main_menu_drawerlayout);
             setNavigationMenuListener();
@@ -76,6 +84,12 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
 
                     break;
                 case R.id.nav_workout_history:
+                    Log.d(TAG, "onNavigationItemSelected: WORKOUT HISTORY PRESSED");
+
+                    //Places the workout history fragment into the fragment container.
+                    WorkoutHistoryFragment workHisFrag = new WorkoutHistoryFragment();
+                    ft.replace(R.id.fragment_container, workHisFrag);
+                    ft.commit();
 
                     break;
                 case R.id.nav_measurement_creation:
@@ -88,10 +102,16 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
 
                     break;
                 case R.id.nav_measurement_history:
+                    Log.d(TAG, "onNavigationItemSelected: MEASUREMENT HISTORY PRESSED");
+
+                    MeasurementHistoryFragment measurementHisFrag = new MeasurementHistoryFragment();
+                    ft.replace(R.id.fragment_container, measurementHisFrag);
+                    ft.commit();
 
                     break;
                 case R.id.nav_logout:
                     Log.d(TAG, "onNavigationItemSelected: LOGOUT PRESSED");
+
 
                     LoginManager.getInstance().logOut();
                     Intent intent = new Intent(this, LoginActivity.class);
