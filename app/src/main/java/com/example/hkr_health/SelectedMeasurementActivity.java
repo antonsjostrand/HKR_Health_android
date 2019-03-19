@@ -1,5 +1,7 @@
 package com.example.hkr_health;
 
+import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +17,7 @@ public class SelectedMeasurementActivity extends AppCompatActivity {
     private TextView titleTV, dateTV, armsTV, legsTV, chestTV, waistTV, shouldersTV, calvesTV;
 
     //variables
-    Measurement mMeasurement;
+    private Measurement mMeasurement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,5 +53,10 @@ public class SelectedMeasurementActivity extends AppCompatActivity {
         waistTV.setText(String.valueOf(mMeasurement.getWaist() + " cm"));
         shouldersTV.setText(String.valueOf(mMeasurement.getShoudlers() + " cm"));
         calvesTV.setText(String.valueOf(mMeasurement.getCalves() + " cm"));
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

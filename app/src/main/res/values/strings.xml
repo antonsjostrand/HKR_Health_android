@@ -13,6 +13,20 @@
     <string name="nav_measurement_creation">Measurement creation</string>
     <string name="nav_measurement_history">Measurement history</string>
     <string name="nav_logout">Logout</string>
+    <string name="nav_facebook_share">Share on Facebook</string>
+    <string name="nav_mail">Send mail</string>
+    <string name="nav_statistics">Statistics</string>
+
+    <!-- Strings used for statistics fragment -->
+    <string name="statistics_intro">Since you first started using HKR Health you have logged the following: </string>
+    <string name="statistics_workouts_logged">Number of workouts logged: </string>
+    <string name="statistics_heaviest_lift">Heaviest lift performed: </string>
+    <string name="statistics_measuerments_logged">Number of measurements logged: </string>
+
+    <!-- Strings used for send mail fragment -->
+    <string name="subject_of_mail">SUBJECT: </string>
+    <string name="body_of_mail">BODY: </string>
+    <string name="send_mail">SEND MAIL</string>
 
     <!-- Strings used for facebook login -->
     <string name="facebook_app_id">566508910509655</string>

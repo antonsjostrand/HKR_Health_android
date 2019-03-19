@@ -35,6 +35,10 @@ public class HkrHealthRepository {
         return mHkrHealthDatabase.getWorkoutDAO().retrieveMaxWorkoutID();
     }
 
+    public LiveData<Integer> retrieveNumberOfWorkouts(){
+        return mHkrHealthDatabase.getWorkoutDAO().retrieveNumberOfWorkouts();
+    }
+
     public void insertMeasurement(Measurement measurement){
         new InsertMeasurementAsyncTask(mHkrHealthDatabase.getMeasurementDAO()).execute(measurement);
     }
@@ -47,12 +51,24 @@ public class HkrHealthRepository {
         return mHkrHealthDatabase.getMeasurementDAO().retrieveMaxMeasurementID();
     }
 
+    public LiveData<Integer> retrieveNumberOfMeasurements(){
+        return mHkrHealthDatabase.getMeasurementDAO().retrieveNumberOfMeasurements();
+    }
+
     public void insertExercise(Exercise exercise){
         new InsertExerciseAsyncTask(mHkrHealthDatabase.getExerciseDAO()).execute(exercise);
     }
 
     public LiveData<List<Exercise>> retrieveSpecificExercise(int id){
         return mHkrHealthDatabase.getExerciseDAO().getSpecificExerciseList(id);
+    }
+
+    public LiveData<String> retrieveHeaviestExerciseLiftName(){
+        return mHkrHealthDatabase.getExerciseDAO().getExercisesWithHeaviestLiftName();
+    }
+
+    public LiveData<String> retrieveHeaviestExerciseLiftWeight(){
+        return mHkrHealthDatabase.getExerciseDAO().getExercisesWithHeaviestLiftWeight();
     }
 
     //ONLY USED WHEN TESTING AND DELETING UNWANTED DATA!!!

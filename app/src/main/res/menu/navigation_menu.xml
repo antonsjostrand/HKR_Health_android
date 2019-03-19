@@ -13,6 +13,15 @@
     <item android:id="@+id/nav_measurement_history"
         android:title="@string/nav_measurement_history"/>
 
+    <item android:id="@+id/nav_statistics"
+        android:title="@string/nav_statistics"/>
+
+    <item android:id="@+id/nav_send_mail"
+        android:title="@string/nav_mail"/>
+
+    <item android:id="@+id/nav_share_facebook"
+        android:title="@string/nav_facebook_share"/>
+
     <item android:id="@+id/nav_logout"
         android:title="@string/nav_logout"/>
 

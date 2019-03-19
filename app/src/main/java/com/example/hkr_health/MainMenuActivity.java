@@ -1,6 +1,7 @@
 package com.example.hkr_health;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -10,14 +11,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 
 import com.example.hkr_health.Database.HkrHealthRepository;
 import com.example.hkr_health.Fragments.MeasurementCreationFragment;
 import com.example.hkr_health.Fragments.MeasurementHistoryFragment;
+import com.example.hkr_health.Fragments.SendMailFragment;
+import com.example.hkr_health.Fragments.StatisticsFragment;
 import com.example.hkr_health.Fragments.WorkoutCreationFragment;
 import com.example.hkr_health.Fragments.WorkoutHistoryFragment;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
 
 public class MainMenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     
@@ -31,6 +40,10 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
     //Fragment variables
     private FragmentManager fm;
     private FragmentTransaction ft;
+
+    //Facebook
+    private CallbackManager mCallBackManager;
+    private ShareDialog mShareDialog;
 
     //Database
     HkrHealthRepository mHkrHealthRepository;
@@ -106,6 +119,43 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
 
                     MeasurementHistoryFragment measurementHisFrag = new MeasurementHistoryFragment();
                     ft.replace(R.id.fragment_container, measurementHisFrag);
+                    ft.commit();
+
+                    break;
+                case R.id.nav_share_facebook:
+                    try{
+                        Log.d(TAG, "onNavigationItemSelected: SHARE FACEBOOK PRESSED");
+
+                        //Facebook share link to a certain website.
+                        FacebookSdk.sdkInitialize(this.getApplicationContext());
+                        mCallBackManager =  CallbackManager.Factory.create();
+                        mShareDialog = new ShareDialog(this);
+
+                        ShareLinkContent linkContent = new ShareLinkContent.Builder()
+                                .setQuote("Testing android application")
+                                .setContentUrl(Uri.parse("https://youtube.com")).build();
+
+                        if (ShareDialog.canShow(ShareLinkContent.class)) {
+                            mShareDialog.show(linkContent);
+                        }
+
+                    }catch (Exception e){
+                        Log.d(TAG, "onNavigationItemSelected: SHARE FACEBOOK ERROR: " + e);
+                    }
+                    break;
+                case R.id.nav_send_mail:
+                    Log.d(TAG, "onNavigationItemSelected: SEND MAIL PRESSED");
+
+                    SendMailFragment sendMailFragment = new SendMailFragment();
+                    ft.replace(R.id.fragment_container, sendMailFragment);
+                    ft.commit();
+
+                    break;
+                case R.id.nav_statistics:
+                    Log.d(TAG, "onNavigationItemSelected: STATISTICS PRESSED");
+
+                    StatisticsFragment statFrag = new StatisticsFragment();
+                    ft.replace(R.id.fragment_container, statFrag);
                     ft.commit();
 
                     break;

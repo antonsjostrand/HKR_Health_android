@@ -26,4 +26,7 @@ public interface MeasurementDAO {
 
     @Query("DELETE FROM measurements")
     void deleteMeasurementsTableContent();
+
+    @Query("SELECT COUNT(*) FROM measurements")
+    LiveData<Integer> retrieveNumberOfMeasurements();
 }

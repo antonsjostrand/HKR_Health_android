@@ -24,4 +24,7 @@ public interface WorkoutDAO {
 
     @Query("DELETE FROM workouts")
     void deleteWorkoutTableContent();
+
+    @Query("SELECT COUNT(*) FROM workouts")
+    LiveData<Integer> retrieveNumberOfWorkouts();
 }
