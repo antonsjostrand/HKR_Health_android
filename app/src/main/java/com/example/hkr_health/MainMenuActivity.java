@@ -150,7 +150,7 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
                         //Facebook share link to a certain website.
                         ShareLinkContent linkContent = new ShareLinkContent.Builder()
                                 .setQuote("Join HKR Health!")
-                                .setContentUrl(Uri.parse("https://drive.google.com/file/d/1j3pfdczBAzu5XNsQzPLehX6LhednnOHx/view?usp=sharing")).build();
+                                .setContentUrl(Uri.parse("https://drive.google.com/file/d/17DMTWY6ooh89QswhdvGV7tOjOPOonh1P/view?usp=sharing")).build();
 
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             mShareDialog.show(linkContent);
@@ -200,7 +200,7 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
     @Override
     protected void onResume() {
         Log.d(TAG, "onResume: CALLED!!!");
-        drawerLayout.setBackgroundResource(R.drawable.dumbellrack);
+        drawerLayout.setBackgroundResource(R.drawable.app_background_hkr_health);
 
         super.onResume();
     }

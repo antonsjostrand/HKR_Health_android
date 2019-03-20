@@ -11,8 +11,12 @@
         android:id="@+id/measurementTitle"
         android:text="@string/title"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/design_textview"
         />
 
     <TextView
@@ -22,8 +26,12 @@
         android:id="@+id/measurementArms"
         android:text="@string/arms"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/measurementTitle"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/design_textview"
         />
 
     <TextView
@@ -33,8 +41,12 @@
         android:id="@+id/measurementLegs"
         android:text="@string/legs"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/measurementArms"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/design_textview"
         />
 
     <TextView
@@ -44,8 +56,12 @@
         android:id="@+id/measurementChest"
         android:text="@string/chest"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/measurementLegs"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/design_textview"
         />
 
     <TextView
@@ -55,8 +71,12 @@
         android:id="@+id/measurementWaist"
         android:text="@string/waist"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/measurementChest"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/design_textview"
         />
 
     <TextView
@@ -66,8 +86,12 @@
         android:id="@+id/measurementShoulders"
         android:text="@string/shoulders"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/measurementWaist"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/design_textview"
         />
 
     <TextView
@@ -77,8 +101,12 @@
         android:id="@+id/measurementCalves"
         android:text="@string/calves"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/measurementShoulders"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:background="@drawable/design_textview"
         />
 
 

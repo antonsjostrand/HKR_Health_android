@@ -118,6 +118,8 @@ public class WorkoutCreationFragment extends Fragment {
                 weightET.getText().clear();
                 repsET.getText().clear();
                 exerciseLV.setAdapter(null);
+                exerciseList.clear();
+                setNr = 0;
             }else{
                 Toast.makeText(getActivity(), "Make sure the values entered are correct", Toast.LENGTH_LONG).show();
                 titleET.setText("Enter only letters");
@@ -199,4 +201,10 @@ public class WorkoutCreationFragment extends Fragment {
         });
     }
 
+    @Override
+    public void onResume() {
+        Log.d(TAG, "onResume: workoutCreationFragment resume calledd!!!!");
+        exerciseList.clear();
+        super.onResume();
+    }
 }

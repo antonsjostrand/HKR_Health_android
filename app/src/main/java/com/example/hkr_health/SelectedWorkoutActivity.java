@@ -32,6 +32,7 @@ public class SelectedWorkoutActivity extends AppCompatActivity {
     private Workout mWorkout;
     private ArrayList<Exercise> mExercises = new ArrayList<>();
     private ExerciseRecyclerAdapter mExerciseRecyclerAdapter;
+    private String mModifiedDate;
 
     //Database
     HkrHealthRepository mHkrHealthRepository;
@@ -51,8 +52,11 @@ public class SelectedWorkoutActivity extends AppCompatActivity {
 
             mWorkout = getIntent().getParcelableExtra("clicked_workout");
 
+            mModifiedDate = mWorkout.getDate();
+            mModifiedDate = mModifiedDate.substring(0,16);
+
             mTitle.setText(mWorkout.getTitle());
-            mDate.setText(mWorkout.getDate());
+            mDate.setText(mModifiedDate);
 
 
             initRecyclerView();

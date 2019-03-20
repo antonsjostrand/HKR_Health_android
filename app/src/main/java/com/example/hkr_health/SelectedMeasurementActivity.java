@@ -18,6 +18,7 @@ public class SelectedMeasurementActivity extends AppCompatActivity {
 
     //variables
     private Measurement mMeasurement;
+    private String mModifiedDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +46,11 @@ public class SelectedMeasurementActivity extends AppCompatActivity {
     }
 
     public void initValues(){
+        mModifiedDate = String.valueOf(mMeasurement.getDate());
+        mModifiedDate = mModifiedDate.substring(0,16);
+
         titleTV.setText(mMeasurement.getMeasurementTitle());
-        dateTV.setText(mMeasurement.getDate());
+        dateTV.setText(mModifiedDate);
         armsTV.setText(String.valueOf(mMeasurement.getArms() + " cm"));
         legsTV.setText(String.valueOf(mMeasurement.getLegs() + " cm"));
         chestTV.setText(String.valueOf(mMeasurement.getChest() + " cm"));

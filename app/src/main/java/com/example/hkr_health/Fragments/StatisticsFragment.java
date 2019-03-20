@@ -82,7 +82,11 @@ public class StatisticsFragment extends Fragment {
             mHkrHealthRepository.retrieveHeaviestExerciseLiftName().observe(getActivity(), new Observer<String>() {
                 @Override
                 public void onChanged(@Nullable String s) {
-                    mExerciseNameTV.setText(s);
+                    if (s != null) {
+                        mExerciseNameTV.setText(s);
+                    }else{
+                        mExerciseNameTV.setText("-");
+                    }
                 }
             });
 
@@ -96,10 +100,12 @@ public class StatisticsFragment extends Fragment {
             mHkrHealthRepository.retrieveHeaviestExerciseLiftWeight().observe(getActivity(), new Observer<String>() {
                 @Override
                 public void onChanged(@Nullable String s) {
-                    mChoosenExercise = String.valueOf(mExerciseNameTV.getText());
-                    mChoosenExercise = mChoosenExercise + " " + s + "kg";
+                    if (s != null) {
+                        mChoosenExercise = String.valueOf(mExerciseNameTV.getText());
+                        mChoosenExercise = mChoosenExercise + " " + s + "kg";
 
-                    mExerciseNameTV.setText(mChoosenExercise);
+                        mExerciseNameTV.setText(mChoosenExercise);
+                    }
                 }
             });
 
