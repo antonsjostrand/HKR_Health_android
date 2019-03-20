@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_menu_drawerlayout"
-    tools:context=".MainMenuActivity">
+    tools:context=".MainMenuActivity"
+    >
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -20,6 +21,9 @@
         android:layout_gravity="start"
         android:id="@+id/navigationMenu"
         app:menu="@menu/navigation_menu"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/black"
+        app:headerLayout="@layout/main_menu_header_layout"
         >
     </android.support.design.widget.NavigationView>
 

@@ -12,10 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.hkr_health.Database.HkrHealthRepository;
-import com.example.hkr_health.Models.Exercise;
 import com.example.hkr_health.R;
-
-import java.util.List;
 
 public class StatisticsFragment extends Fragment {
 
@@ -23,12 +20,11 @@ public class StatisticsFragment extends Fragment {
     private static final String TAG = "StatisticsFragment";
 
     //UI
-    private TextView mNumberOfWorkoutsTV, mNumberOfMeasurementsTV, mExerciseNameTV, mExerciseWeightTV;
+    private TextView mNumberOfWorkoutsTV, mNumberOfMeasurementsTV, mExerciseNameTV;
 
     //Variables
-    private String mExerciseName;
-    private int mNumberOfWorkouts, mNumberOfMeasurements, mExerciseWeight;
-    private Exercise mHeaviestExercise;
+    private int mNumberOfWorkouts, mNumberOfMeasurements;
+    private String mChoosenExercise;
 
     //Database
     HkrHealthRepository mHkrHealthRepository;
@@ -42,7 +38,6 @@ public class StatisticsFragment extends Fragment {
         mNumberOfWorkoutsTV = view.findViewById(R.id.workoutsLoggedTV);
         mNumberOfMeasurementsTV = view.findViewById(R.id.statisticsMeasurementsLoggedTV);
         mExerciseNameTV = view.findViewById(R.id.statisticsExerciseNameTV);
-        mExerciseWeightTV = view.findViewById(R.id.statisticsExerciseWeightTV);
 
         mHkrHealthRepository = new HkrHealthRepository(getActivity());
 
@@ -101,7 +96,10 @@ public class StatisticsFragment extends Fragment {
             mHkrHealthRepository.retrieveHeaviestExerciseLiftWeight().observe(getActivity(), new Observer<String>() {
                 @Override
                 public void onChanged(@Nullable String s) {
-                    mExerciseWeightTV.setText(s + " kg");
+                    mChoosenExercise = String.valueOf(mExerciseNameTV.getText());
+                    mChoosenExercise = mChoosenExercise + " " + s + "kg";
+
+                    mExerciseNameTV.setText(mChoosenExercise);
                 }
             });
 

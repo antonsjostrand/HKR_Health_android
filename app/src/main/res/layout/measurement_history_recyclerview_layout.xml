@@ -8,23 +8,27 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="60"
+        android:layout_weight="55"
         android:id="@+id/titleOfMeasurementTV"
         android:textSize="17sp"
         android:lines="1"
         android:text="Workout"
         android:padding="10dp"
+        android:background="@drawable/design_recyclerview_background"
+        android:textColor="@color/black"
         />
 
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="40"
+        android:layout_weight="45"
         android:id="@+id/dateOfMeasurementTV"
-        android:textSize="15sp"
+        android:textSize="17sp"
         android:lines="1"
         android:text="Date"
         android:padding="10dp"
+        android:background="@drawable/design_recyclerview_background"
+        android:textColor="@color/black"
         />
 
 </LinearLayout>

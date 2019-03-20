@@ -29,8 +29,6 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
 
     //UI
-    private EditText userName, password;
-    private Button createUserButton, loginButton;
     private LoginButton facebookLoginButton;
 
     //Handles the facebook login.
@@ -46,12 +44,6 @@ public class LoginActivity extends AppCompatActivity {
         try {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_login);
-
-            //Creates the buttons and edittexts using the IDs.
-            userName = findViewById(R.id.usernameET);
-            password = findViewById(R.id.passwordET);
-            createUserButton = findViewById(R.id.createUserButton);
-            loginButton = findViewById(R.id.loginButton);
 
             //Creates everything involved with handling the facebook login.
             facebookLoginButton = findViewById(R.id.facebookLoginButton);

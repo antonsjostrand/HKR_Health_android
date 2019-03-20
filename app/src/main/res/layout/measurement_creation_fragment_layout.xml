@@ -5,9 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="30dp"
         android:id="@+id/measurementTitle"
         android:text="@string/title"
         android:textSize="20sp"
@@ -16,9 +16,9 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="30dp"
         android:id="@+id/measurementArms"
         android:text="@string/arms"
         android:textSize="20sp"
@@ -27,9 +27,9 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="30dp"
         android:id="@+id/measurementLegs"
         android:text="@string/legs"
         android:textSize="20sp"
@@ -38,9 +38,9 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="30dp"
         android:id="@+id/measurementChest"
         android:text="@string/chest"
         android:textSize="20sp"
@@ -49,9 +49,9 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="30dp"
         android:id="@+id/measurementWaist"
         android:text="@string/waist"
         android:textSize="20sp"
@@ -60,9 +60,9 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="30dp"
         android:id="@+id/measurementShoulders"
         android:text="@string/shoulders"
         android:textSize="20sp"
@@ -71,9 +71,9 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="30dp"
         android:id="@+id/measurementCalves"
         android:text="@string/calves"
         android:textSize="20sp"
@@ -99,87 +99,101 @@
         />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:id="@+id/measurementTitleET"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementTitle"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/measurementTitle"
         app:layout_constraintBottom_toBottomOf="@id/measurementTitle"
         app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/design_edittext"
+        android:gravity="center"
         />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:id="@+id/measurementArmsET"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementArms"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/measurementTitle"
         app:layout_constraintBottom_toBottomOf="@id/measurementArms"
         app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/design_edittext"
+        android:gravity="center"
         />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:id="@+id/measurementLegsET"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementLegs"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/measurementTitle"
         app:layout_constraintBottom_toBottomOf="@id/measurementLegs"
         app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/design_edittext"
+        android:gravity="center"
         />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:id="@+id/measurementChestET"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementChest"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/measurementTitle"
         app:layout_constraintBottom_toBottomOf="@id/measurementChest"
         app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/design_edittext"
+        android:gravity="center"
         />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:id="@+id/measurementWaistET"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementWaist"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/measurementTitle"
         app:layout_constraintBottom_toBottomOf="@id/measurementWaist"
         app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/design_edittext"
+        android:gravity="center"
         />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:id="@+id/measurementShouldersET"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementShoulders"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/measurementTitle"
         app:layout_constraintBottom_toBottomOf="@id/measurementShoulders"
         app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/design_edittext"
+        android:gravity="center"
         />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:id="@+id/measurementCalvesET"
         android:textSize="20sp"
         android:layout_margin="16dp"
         app:layout_constraintTop_toTopOf="@id/measurementCalves"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/measurementTitle"
         app:layout_constraintBottom_toBottomOf="@id/measurementCalves"
         app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/design_edittext"
+        android:gravity="center"
         />
 
 </android.support.constraint.ConstraintLayout>

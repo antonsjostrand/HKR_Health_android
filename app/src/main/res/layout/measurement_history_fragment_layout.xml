@@ -11,6 +11,7 @@
         android:orientation="vertical"
         android:id="@+id/measurementHistoryRecyclerView"
         android:padding="5dp"
+        android:background="@drawable/design_listview"
         >
 
     </android.support.v7.widget.RecyclerView>

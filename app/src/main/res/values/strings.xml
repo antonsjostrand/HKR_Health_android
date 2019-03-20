@@ -37,10 +37,10 @@
     <string name="date">DATE:</string>
 
     <!-- Strings used in the Workout fragments -->
-    <string name="workout_creation">Create workout</string>
+    <string name="workout_creation"><b>Create workout</b></string>
     <string name="workout_history">View workout history</string>
-    <string name="add_exercise">Add exercise</string>
-    <string name="clear">Clear</string>
+    <string name="add_exercise"><b>Add exercise</b></string>
+    <string name="clear"><b>Clear</b></string>
     <string name="exercise">EXERCISE:</string>
     <string name="weight">WEIGHT:</string>
     <string name="toolbar_title">HKR Health</string>
@@ -48,7 +48,7 @@
     <string name="reps">REPS: </string>
 
     <!-- Strings used in the Measurement fragments -->
-    <string name="measurement_creation">Create measurement</string>
+    <string name="measurement_creation"><b>Create measurement</b></string>
     <string name="measurement_history">View measurement history</string>
     <string name="arms">ARMS: </string>
     <string name="legs">LEGS: </string>

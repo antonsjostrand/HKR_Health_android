@@ -1,6 +1,9 @@
 package com.example.hkr_health;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
@@ -14,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 import com.example.hkr_health.Database.HkrHealthRepository;
 import com.example.hkr_health.Fragments.MeasurementCreationFragment;
@@ -23,10 +27,20 @@ import com.example.hkr_health.Fragments.StatisticsFragment;
 import com.example.hkr_health.Fragments.WorkoutCreationFragment;
 import com.example.hkr_health.Fragments.WorkoutHistoryFragment;
 import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.facebook.share.ShareApi;
+import com.facebook.share.Sharer;
 import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MainMenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     
@@ -59,6 +73,7 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
             drawerLayout = findViewById(R.id.main_menu_drawerlayout);
             setNavigationMenuListener();
 
+            //adjust the keyboard so it doesn't disturb the layouts.
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
         }catch (Exception e){
@@ -126,14 +141,16 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
                     try{
                         Log.d(TAG, "onNavigationItemSelected: SHARE FACEBOOK PRESSED");
 
-                        //Facebook share link to a certain website.
+                        //Facebook
                         FacebookSdk.sdkInitialize(this.getApplicationContext());
                         mCallBackManager =  CallbackManager.Factory.create();
                         mShareDialog = new ShareDialog(this);
 
+
+                        //Facebook share link to a certain website.
                         ShareLinkContent linkContent = new ShareLinkContent.Builder()
-                                .setQuote("Testing android application")
-                                .setContentUrl(Uri.parse("https://youtube.com")).build();
+                                .setQuote("Join HKR Health!")
+                                .setContentUrl(Uri.parse("https://drive.google.com/file/d/1j3pfdczBAzu5XNsQzPLehX6LhednnOHx/view?usp=sharing")).build();
 
                         if (ShareDialog.canShow(ShareLinkContent.class)) {
                             mShareDialog.show(linkContent);
@@ -179,5 +196,14 @@ public class MainMenuActivity extends AppCompatActivity implements NavigationVie
         }
         return true;
     }
+
+    @Override
+    protected void onResume() {
+        Log.d(TAG, "onResume: CALLED!!!");
+        drawerLayout.setBackgroundResource(R.drawable.dumbellrack);
+
+        super.onResume();
+    }
+
 
 }

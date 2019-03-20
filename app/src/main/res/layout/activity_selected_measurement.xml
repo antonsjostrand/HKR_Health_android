@@ -192,14 +192,4 @@
         app:layout_constraintRight_toRightOf="parent"
         />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/measurementShareButton"
-        android:text="SHARE"
-        android:layout_marginLeft="160dp"
-        android:layout_marginBottom="120dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
 </android.support.constraint.ConstraintLayout>

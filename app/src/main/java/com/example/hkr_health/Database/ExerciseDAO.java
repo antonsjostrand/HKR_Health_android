@@ -24,9 +24,9 @@ public interface ExerciseDAO {
     @Query("DELETE FROM exercises")
     void deleteExerciseTableContent();
 
-    @Query("SELECT name FROM exercises WHERE weight = (SELECT MAX(weight) FROM exercises)")
+    @Query("SELECT name FROM exercises WHERE weight = (SELECT MAX(CAST(weight AS INT)) FROM exercises)")
     LiveData<String> getExercisesWithHeaviestLiftName();
 
-    @Query("SELECT weight FROM exercises WHERE weight = (SELECT MAX(weight) FROM exercises)")
+    @Query("SELECT weight FROM exercises WHERE weight = (SELECT MAX(CAST(weight AS INT)) FROM exercises)")
     LiveData<String> getExercisesWithHeaviestLiftWeight();
 }

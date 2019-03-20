@@ -102,10 +102,13 @@ public class WorkoutCreationFragment extends Fragment {
 
             //Makes sure the title only contains letters before creating an workout
             //If it is not only letters an error message is displayed
-            if (workoutName.matches("[a-zA-Z_ ]+")) {
+            if (workoutName.matches("[a-zA-Z_ ]+") && !workoutName.equals("Enter only letters")) {
                 workout = new Workout(workoutName, date, workoutID);
 
-                //Insert the workout into the database.
+                //Insert the workout and the corresponding exercises to the database.
+                for (int i = 0; i < exerciseList.size(); i++){
+                    insertExercise(exerciseList.get(i));
+                }
                 insertWorkout(workout);
                 workoutID++;
 
@@ -137,11 +140,9 @@ public class WorkoutCreationFragment extends Fragment {
 
             //Makes sure the name only contains letters and the weight is a number.
             //Else displays error message and clears the two fields.
-            if (exerciseName.matches("[a-zA-Z_]+") && exerciseWeight.matches("[0-9]+") && String.valueOf(exerciseReps).matches("[0-9]+")) {
+            if (exerciseName.matches("[a-zA-Z_ ]+") && exerciseWeight.matches("[0-9]+") && String.valueOf(exerciseReps).matches("[0-9]+")) {
                 exercise = new Exercise(exerciseName, exerciseWeight, setNr, exerciseReps, workoutID);
                 exerciseList.add(exercise);
-
-                insertExercise(exercise);
 
                 ExerciseListAdapter adapter = new ExerciseListAdapter(getActivity(), R.layout.workout_listview_layout, exerciseList);
                 exerciseLV.setAdapter(adapter);

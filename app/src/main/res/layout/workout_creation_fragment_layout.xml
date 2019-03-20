@@ -31,6 +31,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:background="@drawable/design_edittext"
+
 
         />
 
@@ -60,6 +63,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:background="@drawable/design_edittext"
         />
 
     <TextView
@@ -89,6 +94,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:background="@drawable/design_edittext"
         />
 
     <TextView
@@ -117,7 +124,10 @@
         app:layout_constraintEnd_toEndOf="@+id/exerciseWeight"
         app:layout_constraintLeft_toRightOf="@id/repsLabel"
         app:layout_constraintTop_toBottomOf="@id/exerciseWeight"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:gravity="center"
+        android:background="@drawable/design_edittext"
+        />
 
     <Button
         android:id="@+id/addExerciseButton"
@@ -127,6 +137,7 @@
         android:layout_marginTop="248dp"
         android:background="@drawable/button_background"
         android:text="@string/add_exercise"
+        android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
@@ -140,6 +151,7 @@
         android:layout_marginTop="248dp"
         android:background="@drawable/button_background"
         android:text="@string/clear"
+        android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
@@ -156,6 +168,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/clearButton"
         app:layout_constraintBottom_toTopOf="@+id/createWorkoutButton"
+        android:background="@drawable/design_listview"
+        android:divider="@color/black"
+        android:dividerHeight="2dp"
         tools:layout_editor_absoluteY="410dp"
         >
 
@@ -171,6 +186,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_background"
         android:text="@string/workout_creation"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintLeft_toLeftOf="parent"

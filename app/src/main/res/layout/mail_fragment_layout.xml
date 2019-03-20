@@ -28,25 +28,29 @@
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:ems="10"
         android:id="@+id/sendMailSubjectTW"
         android:layout_margin="30dp"
         app:layout_constraintTop_toTopOf="@id/subjectLabel"
         app:layout_constraintBottom_toBottomOf="@id/subjectLabel"
-        app:layout_constraintLeft_toRightOf="@id/subjectLabel"/>
+        app:layout_constraintLeft_toRightOf="@id/subjectLabel"
+        android:background="@drawable/design_edittext"
+        android:gravity="center"
+        />
 
     <EditText
         android:id="@+id/sendMailBodyTextView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_margin="50dp"
         android:layout_marginLeft="48dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="16dp"
         android:gravity="top|left"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bodyLabel"
         app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/design_edittext"
         />
 
     <Button
@@ -56,7 +60,9 @@
         android:layout_margin="50dp"
         android:text="@string/send_mail"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sendMailBodyTextView"/>
+        app:layout_constraintTop_toBottomOf="@id/sendMailBodyTextView"
+        android:background="@drawable/button_background"
+        />
 
 
 </android.support.constraint.ConstraintLayout>

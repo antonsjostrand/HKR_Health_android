@@ -2,27 +2,43 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/nav_workout_creation"
-        android:title="@string/nav_workout_creation"/>
+        android:title="@string/nav_workout_creation"
+        android:icon="@drawable/ic_fitness_center_black_24dp"
+        />
 
     <item android:id="@+id/nav_workout_history"
-        android:title="@string/nav_workout_history"/>
+        android:title="@string/nav_workout_history"
+        android:icon="@drawable/ic_history_black_24dp"
+        />
 
     <item android:id="@+id/nav_measurement_creation"
-        android:title="@string/nav_measurement_creation"/>
+        android:title="@string/nav_measurement_creation"
+        android:icon="@drawable/ic_measurement_black_24dp"
+        />
 
     <item android:id="@+id/nav_measurement_history"
-        android:title="@string/nav_measurement_history"/>
+        android:title="@string/nav_measurement_history"
+        android:icon="@drawable/ic_history_black_24dp"
+        />
 
     <item android:id="@+id/nav_statistics"
-        android:title="@string/nav_statistics"/>
+        android:title="@string/nav_statistics"
+        android:icon="@drawable/ic_statistics_black_24dp"
+        />
 
     <item android:id="@+id/nav_send_mail"
-        android:title="@string/nav_mail"/>
+        android:title="@string/nav_mail"
+        android:icon="@drawable/ic_email_black_24dp"
+        />
 
     <item android:id="@+id/nav_share_facebook"
-        android:title="@string/nav_facebook_share"/>
+        android:title="@string/nav_facebook_share"
+        android:icon="@drawable/ic_share_black_24dp"
+        />
 
     <item android:id="@+id/nav_logout"
-        android:title="@string/nav_logout"/>
+        android:title="@string/nav_logout"
+        android:icon="@drawable/ic_logout_black_24dp"
+        />
 
 </menu>
